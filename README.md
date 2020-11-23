@@ -1,5 +1,7 @@
 # Django restic gui
 
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+
 ## About
 
 This is a project to create a GUI for the [restic](https://restic.net) backup system
@@ -16,6 +18,12 @@ This project was created for personal use, so it's not perfect by now.
 
 Feel free to fork and change things, if i'm lucky, you will add 
 improvements via pull requests.
+
+### Contributing
+
+If you are planning to contribute we'd recommend installing `pre-commit` hooks.
+To do so simply run `pre-commit install` and you are good to go.
+Any commit from now on will be automatically checked and eventually adjusted according to [black](https://github.com/psf/black).
 
 
 ## Todo
