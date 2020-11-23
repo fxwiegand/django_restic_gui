@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  black:
+  Formatting:
     runs-on: ubuntu-latest
 
     steps:
