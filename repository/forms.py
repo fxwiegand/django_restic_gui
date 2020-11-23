@@ -8,36 +8,36 @@ from repository.models import Repository
 
 class RepositoryForm(forms.ModelForm):
     password2 = forms.CharField(
-        max_length='100', label=_('Password confirm'),
-        widget=forms.PasswordInput
+        max_length="100", label=_("Password confirm"), widget=forms.PasswordInput
     )
 
     class Meta:
         model = Repository
-        fields = ['name', 'sudo',  'password', 'password2']
+        fields = ["name", "sudo", "password", "password2"]
         widgets = {
-            'password': forms.PasswordInput,
+            "password": forms.PasswordInput,
         }
 
     def clean(self):
         cleaned_data = super(RepositoryForm, self).clean()
-        password = cleaned_data.get('password')
-        password2 = cleaned_data.get('password2')
+        password = cleaned_data.get("password")
+        password2 = cleaned_data.get("password2")
         if password and password2:
             if password != password2:
                 raise ValidationError(
-                    _('The two password fields didn’t match.'),
-                    code='password_mismatch',
+                    _("The two password fields didn’t match."),
+                    code="password_mismatch",
                 )
         return cleaned_data
 
 
 class RestoreForm(BSModalForm):
     path = forms.CharField(
-        label=_('Restore to path'), required=False,
-        help_text=_('Leave empty to restores to original path')
+        label=_("Restore to path"),
+        required=False,
+        help_text=_("Leave empty to restores to original path"),
     )
 
 
 class NewBackupForm(BSModalForm):
-    path = forms.CharField(label=_('Backup directory'))
+    path = forms.CharField(label=_("Backup directory"))

@@ -9,7 +9,7 @@ def push(name, path):
 
 
 def pop():
-    obj = CallStack.objects.all().order_by('-level').first()
+    obj = CallStack.objects.all().order_by("-level").first()
     if obj:
         ret = deepcopy(obj)
         obj.delete()
@@ -18,7 +18,7 @@ def pop():
 
 
 def peek():
-    return CallStack.objects.all().order_by('-level').first()
+    return CallStack.objects.all().order_by("-level").first()
 
 
 def delete_to(name):
