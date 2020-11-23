@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('repository', '0004_fileext_filetype'),
+        ("repository", "0004_fileext_filetype"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='fileext',
-            name='name',
+            model_name="fileext",
+            name="name",
             field=models.CharField(max_length=50, unique=True),
         ),
     ]

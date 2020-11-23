@@ -6,13 +6,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('repository', '0002_auto_20201020_0851'),
+        ("repository", "0002_auto_20201020_0851"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='callstack',
-            old_name='url',
-            new_name='path',
+            model_name="callstack",
+            old_name="url",
+            new_name="path",
         ),
     ]

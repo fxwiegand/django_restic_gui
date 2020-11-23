@@ -7,14 +7,19 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('repository', '0007_auto_20201023_1440'),
+        ("repository", "0007_auto_20201023_1440"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='journal',
-            name='repo',
-            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.DO_NOTHING, to='repository.repository', verbose_name='Repository'),
+            model_name="journal",
+            name="repo",
+            field=models.ForeignKey(
+                default=None,
+                on_delete=django.db.models.deletion.DO_NOTHING,
+                to="repository.repository",
+                verbose_name="Repository",
+            ),
             preserve_default=False,
         ),
     ]

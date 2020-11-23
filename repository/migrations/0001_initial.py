@@ -7,21 +7,33 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Repository',
+            name="Repository",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100, verbose_name='Name')),
-                ('password', models.CharField(max_length=100, verbose_name='Password')),
-                ('path', models.FilePathField(allow_files=False, allow_folders=True, verbose_name='Path')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100, verbose_name="Name")),
+                ("password", models.CharField(max_length=100, verbose_name="Password")),
+                (
+                    "path",
+                    models.FilePathField(
+                        allow_files=False, allow_folders=True, verbose_name="Path"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Repository',
-                'verbose_name_plural': 'Repositories',
+                "verbose_name": "Repository",
+                "verbose_name_plural": "Repositories",
             },
         ),
     ]

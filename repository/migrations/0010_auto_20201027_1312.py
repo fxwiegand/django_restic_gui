@@ -6,18 +6,30 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('repository', '0009_auto_20201023_1502'),
+        ("repository", "0009_auto_20201023_1502"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='repository',
-            name='sudo',
-            field=models.BooleanField(default=False, help_text='Repository needs admin privileges'),
+            model_name="repository",
+            name="sudo",
+            field=models.BooleanField(
+                default=False, help_text="Repository needs admin privileges"
+            ),
         ),
         migrations.AlterField(
-            model_name='journal',
-            name='action',
-            field=models.CharField(choices=[('1', 'Backup'), ('2', 'Download'), ('3', 'Restore'), ('4', 'New Repository'), ('5', 'Repository changed')], max_length=2, verbose_name='Action'),
+            model_name="journal",
+            name="action",
+            field=models.CharField(
+                choices=[
+                    ("1", "Backup"),
+                    ("2", "Download"),
+                    ("3", "Restore"),
+                    ("4", "New Repository"),
+                    ("5", "Repository changed"),
+                ],
+                max_length=2,
+                verbose_name="Action",
+            ),
         ),
     ]

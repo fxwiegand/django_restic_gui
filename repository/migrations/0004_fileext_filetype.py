@@ -7,24 +7,48 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('repository', '0003_auto_20201020_1030'),
+        ("repository", "0003_auto_20201020_1030"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='FileType',
+            name="FileType",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50)),
-                ('svg_path', models.CharField(max_length=500)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50)),
+                ("svg_path", models.CharField(max_length=500)),
             ],
         ),
         migrations.CreateModel(
-            name='FileExt',
+            name="FileExt",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50)),
-                ('type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='repository.filetype')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50)),
+                (
+                    "type",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="repository.filetype",
+                    ),
+                ),
             ],
         ),
     ]
